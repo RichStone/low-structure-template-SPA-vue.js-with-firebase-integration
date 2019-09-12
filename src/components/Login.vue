@@ -3,9 +3,12 @@
         <section>
             <div class="col1">
                 <h1>TrackOMAD</h1>
-                <p>Get started with OMAD.</p>
+                <p>Get started with One Meal A Day. Or Two Meals.</p>
             </div>
-            <div id="firebaseui-auth-container"></div>
+            <div class="col2">
+                <h2>Enter the World of OMAD</h2>
+                <div id="firebaseui-auth-container"></div>
+            </div>
         </section>
     </div>
 </template>
