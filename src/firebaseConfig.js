@@ -17,18 +17,14 @@ firebase.initializeApp(firebaseConfig)
 // firebase utils
 const db = firebase.firestore()
 const auth = firebase.auth()
-const currentUser = auth.currentUser
 const ui = new firebaseui.auth.AuthUI(auth);
 
 // firebase collections
-const usersCollection = db.collection('users')
 const eatingWindowsCollection = db.collection('eatingWindows')
 
 export {
     db,
     ui,
     auth,
-    currentUser,
-    usersCollection,
     eatingWindowsCollection
 }
