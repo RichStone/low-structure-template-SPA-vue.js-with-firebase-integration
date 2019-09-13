@@ -27,3 +27,34 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Deploy to Firebase Hosting
+```bash
+npm install -g firebase-tools
+firebase login
+firebase init
+```
+Choose rewrites to index.html to avoid routing to 404 page up on firebase hosting. Your firebase.json should look like similar to this:
+```json
+{
+  "hosting": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}
+
+```
