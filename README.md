@@ -1,4 +1,4 @@
-# trackomad
+# Template for a minimal Vue.js app hosted with firebase
 
 ## Project setup
 ```
